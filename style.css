@@ -1,101 +1,62 @@
-body{
-    background: ghostwhite;
-    color: dimgray;
-    font-family: serif;
+body {
+    font-family: Arial, sans-serif;
     text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100vh ;
+    background-color: #f0f0f0;
 }
 
-h1{
-    font-size: 2rem;
-}
-
-#container{
-    margin: 5% auto;
+.game-container {
+    justify-content: center;
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-.box{
-    display: inline-block;
-    border: 1px solid gray;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin-left: 40px ;
+
+}
+
+.cell {
     width: 100px;
     height: 100px;
-    text-align: center;
-    box-sizing: border-box;
-    padding: 0;
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    cursor: pointer;
 }
 
-span{
-    position: absolute;
-    font-size: 75px;
-    font-family: sans-serif;
-    text-align: center;
-    height: 75px;
-    width: 75px;
-    padding: 0;
-    margin: 5px;
-    margin-left: -35px;
+.cell.winner {
+    background-color: #c2ffcf;
 }
 
-.top{
-    border-top: none;
+h1 {
+    font-size: 24px;
 }
 
-.bottom{
-    border-bottom: none;
+#status {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px 0;
 }
-
-.left{
-    border-left: none;
-}
-
-.right{
-    border-right: none;
-}
-
-.alert{
-    height: 75px;
-    width: 125px;
-    display: inline-block;
-    background: ghostwhite;
-    position: relative;
-    z-index: 10;
-    margin-top: -50%;
-    border-radius: 20px;
-    box-shadow: 0 0 75px 2px dimgray;
-    animation: larger 0.5s;
-    animation-fill-mode: forwards;
-    box-sizing: content-box;
-    padding: 30px;
-    bottom: 50px;
-    top: 0;
-}
-
-button{
-    background: dimgray;
-    border-radius: 2px;
-    color: ghostwhite;
-    border: none;
-    outline: none;
-}
-
-button:focus{
-    background: silver;
-}
-
-.activeBox{
-    background: silver;
-}
-
-@keyframes larger{
-    from{
-        height: 75px;
-        width: 125px;
-    }
-
-    to{
-        height: 100px;
-        width: 250px;
-    }
-
+.button{
+    width:130px ;
+    height:50px;
+    border-radius:6px;
+    background-color:blue;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+    margin-right: 10px;
 }
